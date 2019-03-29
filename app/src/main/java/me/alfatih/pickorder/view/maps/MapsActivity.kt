@@ -90,10 +90,10 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
         mapFragment.getMapAsync(this)
 
         // https://stackoverflow.com/questions/54965020/apiexception-9003-places-api-access-not-configured
-        // Initialize Places.
+        // https://stackoverflow.com/questions/54707679/autocompletefragment-results-return-a-place-with-null-attributes
 
-        Places.initialize(applicationContext, getString(R.string.google_maps_key))
-        var client = Places.createClient(this)
+        /*Places.initialize(applicationContext, getString(R.string.google_maps_key))
+        var client = Places.createClient(this)*/
 
         if (!Places.isInitialized()) {
             Places.initialize(applicationContext, getString(R.string.google_maps_key))
@@ -101,13 +101,13 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
 
         val autocompleteFragment =
             supportFragmentManager.findFragmentById(R.id.place_autocomplete) as AutocompleteSupportFragment
-        autocompleteFragment.setPlaceFields(Arrays.asList(Place.Field.ID, Place.Field.NAME))
+        autocompleteFragment.setPlaceFields(Arrays.asList(Place.Field.ID, Place.Field.NAME,Place.Field.LAT_LNG))
         autocompleteFragment.setOnPlaceSelectedListener(this)
 
     }
 
     override fun onPlaceSelected(p0: Place) {
-        //mCurrentLocationMarker?.position = p0.latLng
+        mCurrentLocationMarker?.position = p0.latLng
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(p0.latLng, 16f))
 
     }

@@ -32,9 +32,11 @@ dependencies {
     implementation 'com.google.android.gms:play-services-maps:16.1.0'
     implementation 'com.google.android.gms:play-services-location:16.0.0'
 
+    // anko
     implementation "org.jetbrains.anko:anko:$anko_version"
-    implementation 'com.google.android.libraries.places:places:1.0.0'
 
+    // places sdk
+    implementation 'com.google.android.libraries.places:places:1.0.0'
 
     // network
     implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
