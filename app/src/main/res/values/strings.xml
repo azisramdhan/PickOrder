@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Pick Order</string>
+    <string name="form_address">Alamat</string>
+    <string name="form_city">Kota atau Kecamatan</string>
+    <string name="form_postal_code">Kode Pos</string>
+    <string name="form_name">Simpan Alamat sebagai (Contoh: Alamat rumah, Alamat kost, Alamat kantor dll)</string>
+    <string name="form_recipient_name">Nama Penerima</string>
+    <string name="form_phone">Nomor Telepon Penerima</string>
+    <string name="form_location">Pilih Lokasi</string>
+    <string name="attention_location">Pastikan Lokasi yang Anda tandai di peta sesuai dengan alamat yang Anda isi di
+        atas
+    </string>
+    <string name="title_activity_maps">Pilih Lokasi</string>
+    <string name="btn_save">Simpan</string>
+    <string name="loading">Loading ...</string>
+</resources>
